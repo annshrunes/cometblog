@@ -9,5 +9,5 @@ tags:
 
 Takako Uroooooo!!!!!!!!!!!!
 
-![[Uro_confronts_Yuta_%28Anime%29.webp]]
-![[Takako_Uro_first_appearance_%28Anime%29.webp]]
+![Image Description](/images/Uro_confronts_Yuta_%28Anime%29.webp)
+![Image Description](/images/Takako_Uro_first_appearance_%28Anime%29.webp)
