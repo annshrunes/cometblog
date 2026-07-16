@@ -92,23 +92,23 @@ if ! git push origin "$current_branch"; then
     exit 1
 fi
 
-# Step 8: Push the public folder to the hostinger branch using subtree split and force push
-echo "Deploying to GitHub Hostinger..."
-if git branch --list | grep -q 'hostinger-deploy'; then
-    git branch -D hostinger-deploy
+# Step 8: Push the public folder to the vercel branch using subtree split and force push
+echo "Deploying to GitHub vercel..."
+if git branch --list | grep -q 'vercel-deploy'; then
+    git branch -D vercel-deploy
 fi
 
-if ! git subtree split --prefix public -b hostinger-deploy; then
+if ! git subtree split --prefix public -b vercel-deploy; then
     echo "Subtree split failed."
     exit 1
 fi
 
-if ! git push origin hostinger-deploy:hostinger --force; then
-    echo "Failed to push to hostinger branch."
-    git branch -D hostinger-deploy
+if ! git push origin vercel-deploy:vercel --force; then
+    echo "Failed to push to vercel branch."
+    git branch -D vercel-deploy
     exit 1
 fi
 
-git branch -D hostinger-deploy
+git branch -D vercel-deploy
 
 echo "All done! Site synced, processed, committed, built, and deployed."
